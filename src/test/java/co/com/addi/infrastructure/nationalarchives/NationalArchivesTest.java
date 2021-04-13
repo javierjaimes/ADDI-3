@@ -1,23 +1,23 @@
-package co.com.addi.infrastructure.nationalregistry;
+package co.com.addi.infrastructure.nationalarchives;
 
 import co.com.addi.domain.entities.Client;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-public class ClsRegisternationalTest {
+public class NationalArchivesTest {
 
-    private ClsRegisternational registryNational;
+    private NationalArchives clsNationalArchives;
 
     @BeforeEach
     public void init(){
-        registryNational = new ClsRegisternational();
+        clsNationalArchives = new NationalArchives();
     }
 
     // Dummy Test: it was designed to be implemented according with real external systems response
     @Test
-    public void validateClientTest(){
-        Boolean response = registryNational.validateClient(getClient());
+    public void clientHasJudicialRecordsTest(){
+        Boolean response = clsNationalArchives.clientHasJudicialRecords(getClient());
         Assertions.assertTrue(response == Boolean.FALSE || response == Boolean.TRUE);
     }
 

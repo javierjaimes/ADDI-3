@@ -3,10 +3,10 @@ package co.com.addi.usecase.impl;
 import co.com.addi.domain.dto.ClientDTO;
 import co.com.addi.domain.entities.Client;
 import co.com.addi.domain.entities.Prospect;
-import co.com.addi.domain.repositories.NationalArchives;
-import co.com.addi.domain.repositories.RegistryNational;
+import co.com.addi.domain.repositories.INationalArchives;
+import co.com.addi.domain.repositories.IRegistryNational;
 import co.com.addi.infrastructure.crm.CrmSystem;
-import co.com.addi.portinterface.impl.ClsPortSalesPipeline;
+import co.com.addi.portinterface.impl.PortSalesPipeline;
 import co.com.addi.usecase.mapper.MapperSalesPipeline;
 import lombok.NoArgsConstructor;
 import org.junit.jupiter.api.Assertions;
@@ -25,10 +25,10 @@ public class SalesPipelineTest {
     private MapperSalesPipeline mapperSalesPipeline;
 
     @Mock
-    private RegistryNational registryNational;
+    private IRegistryNational registryNational;
 
     @Mock
-    private NationalArchives nationalArchives;
+    private INationalArchives nationalArchives;
 
     @Mock
     private CrmSystem crmSystem;

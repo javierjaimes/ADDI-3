@@ -1,7 +1,7 @@
 package co.com.addi.domain.entities;
 
-import co.com.addi.domain.repositories.NationalArchives;
-import co.com.addi.domain.repositories.RegistryNational;
+import co.com.addi.domain.repositories.INationalArchives;
+import co.com.addi.domain.repositories.IRegistryNational;
 import co.com.addi.infrastructure.crm.CrmSystem;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -22,12 +22,12 @@ public class Prospect implements IProspect{
     private Integer score;
 
     @Override
-    public Boolean leadExitsInRegistryNational(RegistryNational registryNational){
+    public Boolean leadExitsInRegistryNational(IRegistryNational registryNational){
         return registryNational.validateClient(client);
     }
 
     @Override
-    public Boolean leadHasJudicialRecords(NationalArchives nationalArchives){
+    public Boolean leadHasJudicialRecords(INationalArchives nationalArchives){
         return nationalArchives.clientHasJudicialRecords(client);
     }
 

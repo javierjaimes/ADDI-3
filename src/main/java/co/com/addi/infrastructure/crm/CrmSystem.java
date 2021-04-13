@@ -1,13 +1,13 @@
 package co.com.addi.infrastructure.crm;
 
 import co.com.addi.domain.entities.Client;
-import co.com.addi.domain.repositories.QualificationSystem;
+import co.com.addi.domain.repositories.IQualificationSystem;
 import org.springframework.stereotype.Service;
 
 import java.util.concurrent.ThreadLocalRandom;
 
 @Service
-public class CrmSystem implements QualificationSystem {
+public class CrmSystem implements IQualificationSystem {
 
     public static final int LOWEST_SCORE_RANGE = 0;
     public static final int HIGHEST_SCORE_RANGE = 100;

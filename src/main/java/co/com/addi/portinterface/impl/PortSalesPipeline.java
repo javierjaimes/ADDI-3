@@ -8,12 +8,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class ClsPortSalesPipeline implements IPortSalesPipeline {
+public class PortSalesPipeline implements IPortSalesPipeline {
 
     private ISalesPipeline salesPipelineUC;
 
     @Autowired
-    public ClsPortSalesPipeline(ISalesPipeline salesPipelineUC) {
+    public PortSalesPipeline(ISalesPipeline salesPipelineUC) {
         this.salesPipelineUC = salesPipelineUC;
     }
 

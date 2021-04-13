@@ -15,7 +15,7 @@ import org.springframework.test.util.ReflectionTestUtils;
 public class ClsPortSalesPipelineTest {
 
     @InjectMocks
-    private ClsPortSalesPipeline clsPortSalesPipeline;
+    private PortSalesPipeline clsPortSalesPipeline;
 
     @Mock
     private SalesPipeline salesPipelineUC;
@@ -23,7 +23,7 @@ public class ClsPortSalesPipelineTest {
     @BeforeEach
     public void init(){
         MockitoAnnotations.openMocks(this);
-        clsPortSalesPipeline = new ClsPortSalesPipeline(salesPipelineUC);
+        clsPortSalesPipeline = new PortSalesPipeline(salesPipelineUC);
         ReflectionTestUtils.setField(
                 clsPortSalesPipeline, "salesPipelineUC", salesPipelineUC);
     }

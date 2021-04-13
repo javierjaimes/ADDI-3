@@ -1,11 +1,11 @@
 package co.com.addi.domain.entities;
 
-import co.com.addi.ClientApp;
-import co.com.addi.domain.repositories.NationalArchives;
-import co.com.addi.domain.repositories.RegistryNational;
+import co.com.addi.AddiApp;
+import co.com.addi.domain.repositories.INationalArchives;
+import co.com.addi.domain.repositories.IRegistryNational;
 import co.com.addi.infrastructure.crm.CrmSystem;
-import co.com.addi.infrastructure.nationalarchives.ClsNationalArchives;
-import co.com.addi.infrastructure.nationalregistry.ClsRegisternational;
+import co.com.addi.infrastructure.nationalarchives.NationalArchives;
+import co.com.addi.infrastructure.nationalregistry.RegisterNational;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -25,10 +25,10 @@ public class ProspectTest {
     private Client client;
 
     @Mock
-    private RegistryNational registryNational;
+    private IRegistryNational registryNational;
 
     @Mock
-    private NationalArchives nationalArchives;
+    private INationalArchives nationalArchives;
 
     @Mock
     private CrmSystem crmSystem;

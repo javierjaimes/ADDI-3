@@ -1,14 +1,14 @@
 package co.com.addi.infrastructure.nationalregistry;
 
 import co.com.addi.domain.entities.Client;
-import co.com.addi.domain.repositories.RegistryNational;
+import co.com.addi.domain.repositories.IRegistryNational;
 import org.springframework.stereotype.Service;
 
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.concurrent.TimeUnit;
 
 @Service
-public class ClsRegisternational implements RegistryNational {
+public class RegisterNational implements IRegistryNational {
 
     // Method to simulate the response if the data of any client that is in the National Registry Identification
     // match with the information in the local database

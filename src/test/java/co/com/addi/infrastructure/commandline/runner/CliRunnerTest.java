@@ -10,7 +10,7 @@ public class MyRunnerTest {
 /*
     @Test
     public void shouldTakeUserInput() {
-        MyRunner myRunner = new MyRunner();
+        CliRunner myRunner = new CliRunner();
 
         String name = "Test";
         InputStream in = new ByteArrayInputStream(name.getBytes());

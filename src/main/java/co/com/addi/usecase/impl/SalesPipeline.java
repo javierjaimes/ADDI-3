@@ -3,8 +3,8 @@ package co.com.addi.usecase.impl;
 import co.com.addi.domain.dto.ClientDTO;
 import co.com.addi.domain.entities.Client;
 import co.com.addi.domain.entities.Prospect;
-import co.com.addi.domain.repositories.NationalArchives;
-import co.com.addi.domain.repositories.RegistryNational;
+import co.com.addi.domain.repositories.INationalArchives;
+import co.com.addi.domain.repositories.IRegistryNational;
 import co.com.addi.infrastructure.crm.CrmSystem;
 import co.com.addi.usecase.ISalesPipeline;
 import co.com.addi.usecase.mapper.MapperSalesPipeline;
@@ -24,13 +24,13 @@ public class SalesPipeline implements ISalesPipeline {
 
     private MapperSalesPipeline mapperSalesPipeline;
 
-    private RegistryNational registryNational;
-    private NationalArchives nationalArchives;
+    private IRegistryNational registryNational;
+    private INationalArchives nationalArchives;
     private CrmSystem crmSystem;
     private Prospect prospect;
 
     @Autowired
-    public SalesPipeline(MapperSalesPipeline mapperSalesPipeline, RegistryNational registryNational, NationalArchives nationalArchives, CrmSystem crmSystem, Prospect prospect) {
+    public SalesPipeline(MapperSalesPipeline mapperSalesPipeline, IRegistryNational registryNational, INationalArchives nationalArchives, CrmSystem crmSystem, Prospect prospect) {
         this.mapperSalesPipeline = mapperSalesPipeline;
         this.registryNational = registryNational;
         this.nationalArchives = nationalArchives;

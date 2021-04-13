@@ -78,7 +78,7 @@ test {
 
 application {
     // Define the main class for the application.
-    mainClassName = 'co.com.addi.ClientApp'
+    mainClassName = 'co.com.addi.AddiApp'
 }
 
 bootRun {

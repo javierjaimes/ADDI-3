@@ -12,7 +12,7 @@ import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 import org.springframework.test.util.ReflectionTestUtils;
 
-public class ClsPortSalesPipelineTest {
+public class PortSalesPipelineTest {
 
     @InjectMocks
     private PortSalesPipeline clsPortSalesPipeline;
